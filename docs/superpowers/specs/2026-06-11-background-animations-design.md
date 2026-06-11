@@ -81,9 +81,9 @@ A recurring GSAP timeline fires every 3–6s (randomised interval). Each firing:
 
 | File         | Change                                                      |
 |--------------|-------------------------------------------------------------|
-| `index.html` | Add `<svg id="bg-canvas">` as first child of `<body>`; add GSAP CDN script tag |
+| `index.html` | Add `<svg id="bg-canvas">` as first child of `<body>`; add GSAP CDN `<script>` tag followed by `<script src="bg.js">` (both regular scripts, not modules) before `</body>` |
 | `style.css`  | Add fixed positioning for `#bg-canvas`; add `z-index: 1` to `.console` |
-| `bg.js`      | New file — all star/nebula/shooter generation and GSAP animation logic |
+| `bg.js`      | New file — all star/nebula/shooter generation and GSAP animation logic; reads GSAP from the global `gsap` object exposed by the CDN script |
 
 ## Constraints
 
